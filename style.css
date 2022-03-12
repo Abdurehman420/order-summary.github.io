@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+
+.container {
+  width: min-content;
+
+  border-radius: 1rem;
+  overflow: hidden;
+
+  background-color: white;
+
+  position: relative;
+  /* z-index: -3; */
+  grid-column: 3 / 5;
+  grid-row: 3 / 5;
+  box-shadow: 0 1.5rem 4rem rgba(black, 0.4);
+}
+body {
+  /* z-index: 300; */
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to right bottom,
+    hsla(225, 100%, 94%, 0.664),
+    hsla(224, 23%, 55%, 0.63)
+  );
+  position: relative;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+.container::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  /* background: red; */
+  background: url(pattern-background-desktop.svg) no-repeat center center/cover;
+  transform: rotate(180deg);
+  background-size: 100%;
+  background-position: top;
+  box-shadow: 0 1.5rem 3rem rgba(black, 0.6);
+}
+.asd {
+  position: absolute;
+  z-index: -500;
+  background-size: 130%;
+  background-position: top;
+}
+p {
+  text-align: center;
+  padding: 1rem 2rem;
+  color: hsl(224, 23%, 55%);
+  font-size: 0.8rem;
+}
+h2 {
+  font-weight: 900;
+  text-align: center;
+  padding-top: 1.5rem;
+}
+h3 {
+  font-size: 0.8rem;
+  /* padding-top: 3rem; */
+}
+h6 {
+  font-size: 0.8rem;
+  color: hsl(224, 23%, 55%);
+}
+.plan {
+  /* padding: 0 2rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: red; */
+  padding: 1rem 2rem;
+  /* width: 60%; */
+}
+a {
+  color: hsl(245, 75%, 52%);
+  transition: all 200ms;
+}
+a:hover {
+  text-decoration: none;
+}
+.text {
+  /* display: flex;
+  justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  /* padding: 0rem 2rem; */
+  padding-left: 0.8rem;
+  /* background-color: hsla(225, 100%, 94%, 0.555); */
+  padding-right: 3rem;
+}
+
+.immage {
+  width: 100%;
+  /* overflow: hidden; */
+}
+.proceed {
+  width: 100%;
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(245, 75%, 52%);
+  color: white;
+  box-shadow: 0 1.5rem 3rem rgba(black, 0.6);
+  z-index: 3;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+.proceed:hover {
+  background-color: hsla(245, 75%, 52%, 0.582);
+}
+.cancel {
+  width: 100%;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 10px;
+  background: none;
+  /* background-color: hsl(245, 75%, 52%);
+  color: white; */
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.buttons {
+  padding: 0 1rem;
+}
